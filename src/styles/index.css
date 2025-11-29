@@ -9,3 +9,92 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+body {
+    background: #f4e7b5;
+    font-family: "Patrick Hand", "Comic Sans MS", cursive;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container-main {
+    background: #fff8d6;
+    border: 2px solid #e0d59a;
+    width: 420px;
+    margin-top: 40px;
+    padding: 20px 30px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+    text-align: center;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #5a4612;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    border: 2px solid #c4b274;
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: "Patrick Hand", cursive;
+    background: #fffceb;
+}
+
+button {
+    margin-left: 10px;
+    padding: 10px 14px;
+    border: none;
+    background: #d4b37f;
+    color: white;
+    font-family: "Patrick Hand", cursive;
+    border-radius: 6px;
+    font-size: 18px;
+    padding: 4px;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filters button {
+    background: #e6c88e;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    font-size: 22px;
+    color: #4b3a14;
+    padding: 12px 0;
+    position: relative;
+}
+
+li button {
+    background: transparent;
+    color: #a23b3b;
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+hr {
+    width: 90%;
+    border: none;
+    border-top: 2px solid rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+}
