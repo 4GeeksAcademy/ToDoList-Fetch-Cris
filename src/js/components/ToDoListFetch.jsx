@@ -25,13 +25,14 @@ const ToDoListFetch = () => {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ todo })
         })
             .then(res => {
                 if (!res.ok) throw new Error('error al crear usuario')
                 return res.json();
             })
-            .catch(err => console.error(err))
+            .catch(() => {
+                
+            })
     }
 
 
