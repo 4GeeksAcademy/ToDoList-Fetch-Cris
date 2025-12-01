@@ -19,6 +19,21 @@ const ToDoListFetch = () => {
             .catch(err => console.error(err));
     };
 
+    const createUser = () => {
+        fetch(`${BASE_URL}/users/${USERNAME}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ todo })
+        })
+            .then(res => {
+                if (!res.ok) throw new Error('error al crear usuario')
+                return res.json();
+            })
+            .catch(err => console.error(err))
+    }
+
 
     const addTodo = () => {
         return fetch(`${BASE_URL}/todos/${USERNAME}`, {
@@ -55,6 +70,7 @@ const ToDoListFetch = () => {
         e.preventDefault();
         if (todo === "") return alert('Mete minimo alguna tarea');
 
+
         addTodo().then(() => {
             getTodos();
             setTodo("");
@@ -62,6 +78,7 @@ const ToDoListFetch = () => {
     };
 
     useEffect(() => {
+        createUser();
         getTodos();
     }, []);
 
@@ -88,7 +105,7 @@ const ToDoListFetch = () => {
                             <button onClick={() => deleteTodo(item.id)}>🗑️</button>
                         </li>
 
-                        <hr/>
+                        <hr />
                     </div>
                 ))}
             </ul>
